@@ -1,0 +1,44 @@
+name: PhysiqueTrack
+options:
+  bundleIdPrefix: com.physiquetrack
+  deploymentTarget:
+    iOS: "16.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+
+targets:
+  PhysiqueTrack:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: Sources
+      - path: Resources/Assets.xcassets
+    info:
+      path: Resources/Info.plist
+      properties:
+        CFBundleDisplayName: "تطور الوزن"
+        CFBundleName: "PhysiqueTrack"
+        CFBundleShortVersionString: "1.0.0"
+        CFBundleVersion: "1"
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: "يحتاج التطبيق للوصول إلى الكاميرا لالتقاط صور متابعة التطور مع طبقة التطابق الشفافة."
+        NSPhotoLibraryUsageDescription: "يحتاج التطبيق للوصول إلى مكتبة الصور في حال رغبت باستيراد صور سابقة."
+        NSFaceIDUsageDescription: "يُستخدم Face ID لحماية صورك وبياناتك الخاصة داخل التطبيق."
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.physiquetrack.app
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGNING_REQUIRED: NO
+        CODE_SIGN_IDENTITY: ""
+        DEVELOPMENT_TEAM: ""
